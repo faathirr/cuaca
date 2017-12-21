@@ -9,8 +9,8 @@ Modified @ Farzain - zFz
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = 'YOUR-CHANNEL-ACCESS-TOKEN'; //sesuaikan 
-$channelSecret = 'YOUR-CHANNEL-SECRET-CODE';//sesuaikan
+$channelAccessToken = 'gppIdQJjb73tabAwuudLYBP9UFCUpgrK/HdEkRGdN2ANhl3lbuX4AszM+0yCbAgDdD7rzVSefTzdVI6RSMzuM7dK3cDpKdBJlZzMFx83HTrPRSHX1Fks7aDtlgjeDtDE0omPo/j+a+mqcWIoZTGb2AdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = 'YOUR-CHANNEL-SECRET-CODe69951ecf82dd76f82c78b107d6e96e4';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -43,7 +43,7 @@ function cuaca($keyword) {
     $response = Unirest\Request::get("$uri");
 
     $json = json_decode($response->raw_body, true);
-    $result = "Halo Kak ^_^ Ini ada Ramalan Cuaca Untuk Daerah ";
+    $result = "Ramalan Cuaca Untuk Daerah ";
 	$result .= $json['name'];
 	$result .= " Dan Sekitarnya";
 	$result .= "\n\nCuaca : ";
@@ -97,7 +97,7 @@ if($message['type']=='text') {
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => 'Makasih Kak Stikernya ^_^'										
+										'text' => 'Thanks For The Sticker's ^^'										
 									
 									)
 							)
